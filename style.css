@@ -325,26 +325,15 @@ a { color: inherit; text-decoration: none; }
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 14px;
-}
-
-.cert-thumb.cert-icon {
-  height: 170px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 200px;
   background: var(--paper);
-}
-
-.cert-thumb.cert-icon i {
-  font-size: 48px;
-  color: var(--copper);
 }
 
 .cert-card img {
   width: 100%;
-  height: 170px;
-  object-fit: cover;
-  object-position: top;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
   display: block;
 }
 
