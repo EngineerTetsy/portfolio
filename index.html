@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lizi — Embedded Systems Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand">LS<span class="dot">.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="hero-inner reveal">
+    <p class="eyebrow">// Embedded Systems &amp; FPGA Engineer</p>
+    <h1>Hello, I'm Lizi.</h1>
+    <p class="hero-sub">Welcome to my portfolio website! I am an ECE Engineer. I design and build the layer
+    between hardware and data. Proficient in designing scalable hardware solutions, optimizing circuit
+    layouts, and leveraging advanced IoT technologies. Skilled in Proteus Professional, KiCad, C/C++, FPGA,
+    8-bit and 32-bit microcontroller programming for efficient system integration. Strong problem-solving
+    abilities with expertise in schematic capture, hardware debugging, and firmware development.
+    Through this website, you will discover a collection of my projects and certifications that showcase
+    my abilities and creative problem-solving approach. If you're seeking an Electronic Engineer who is
+    passionate about delivering excellence, let's connect and collaborate on creating something remarkable
+    together.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">See projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+
+    <div class="about-bottom reveal">
+      <div class="stat">
+        <span class="stat-number" data-target="8">0</span>
+        <span class="stat-label">Projects done</span>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/purple.blaze.08/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/EngineerTetsy" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/lizi-shavadze-8003421a7/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+
+      <a href="assets/Lizi-Resume.pdf" download class="btn btn-primary">
+        <i class="fa-solid fa-download"></i> My resume
+      </a>
+    </div>
+  </div>
+  <div class="trace-divider" aria-hidden="true"></div>
+</header>
+
+
+<section id="skills">
+  <div class="section-inner">
+    <p class="ref-tag reveal">My Skills</p>
+    <h2 class="section-title reveal">What I build with</h2>
+    <div class="skills-list">
+      <div class="skill-row reveal">
+        <span class="skill-name">VHDL / FPGA (Vivado)</span>
+        <div class="skill-track"><div class="skill-fill" data-percent="88"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <span class="skill-name">Embedded C / STM32</span>
+        <div class="skill-track"><div class="skill-fill" data-percent="92"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <span class="skill-name">Python (data pipelines, test infra)</span>
+        <div class="skill-track"><div class="skill-fill" data-percent="90"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <span class="skill-name">Signal processing &amp; instrumentation</span>
+        <div class="skill-track"><div class="skill-fill" data-percent="83"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <span class="skill-name">PCB &amp; circuit fundamentals</span>
+        <div class="skill-track"><div class="skill-fill" data-percent="87"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <span class="skill-name">Databases (TimescaleDB, MongoDB)</span>
+        <div class="skill-track"><div class="skill-fill" data-percent="82"></div></div>
+      </div>
+      <div class="skill-row reveal">
+        <span class="skill-name">SQL</span>
+        <div class="skill-track"><div class="skill-fill" data-percent="80"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="trace-divider" aria-hidden="true"></div>
+</section>
+
+<section id="projects">
+  <div class="section-inner">
+    <p class="ref-tag reveal">Projects</p>
+    <h2 class="section-title reveal">Selected work</h2>
+
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="fpga">FPGA / VHDL</button>
+      <button class="filter-btn" data-filter="embedded">Embedded</button>
+      <button class="filter-btn" data-filter="robotics">Robotics</button>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card reveal" data-category="fpga">
+        <span class="card-tag">FPGA / VHDL</span>
+        <h3>Signal Generator &amp; Data Capture</h3>
+        <p>VHDL firmware for signal generation and instrument data capture on a ZCU104 (Zynq UltraScale+),
+        built and verified through Vivado simulation and implementation.</p>
+        <a href="#" class="card-link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card reveal" data-category="robotics">
+        <span class="card-tag">Robotics</span>
+        <h3>6-Axis Robotic Arm</h3>
+        <p>Fully articulated robotic arm with custom inverse kinematics and stepper-motor control,
+        built from the mechanics up.</p>
+        <a href="#" class="card-link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card reveal" data-category="embedded">
+        <span class="card-tag">Embedded</span>
+        <h3>RFID Attendance System</h3>
+        <p>Contactless attendance tracker using a microcontroller-driven RFID reader with live logging
+        to a backend database.</p>
+        <a href="#" class="card-link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card reveal" data-category="embedded">
+        <span class="card-tag">Embedded</span>
+        <h3>Ultrasonic Parking System</h3>
+        <p>Distance-sensing parking assistant with buzzer and LED feedback that scales with proximity
+        to an obstacle.</p>
+        <a href="#" class="card-link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card reveal" data-category="embedded">
+        <span class="card-tag">Embedded</span>
+        <h3>Stepper Motor Firmware</h3>
+        <p>STM32-based stepper motor control firmware developed during an internship, focused on
+        precise, repeatable motion.</p>
+        <a href="#" class="card-link">View on GitHub →</a>
+      </article>
+
+      <article class="project-card reveal" data-category="fpga">
+        <span class="card-tag">FPGA / VHDL</span>
+        <h3>Scalable Research Data Management</h3>
+        <p>Python test infrastructure and a database-logging hook connecting live instrumentation
+        to a TimescaleDB backend, built for high-speed lab data capture.</p>
+        <a href="#" class="card-link">View on GitHub →</a>
+      </article>
+
+    </div>
+  </div>
+  <div class="trace-divider" aria-hidden="true"></div>
+</section>
+
+<section id="certificates">
+  <div class="section-inner">
+    <p class="ref-tag reveal">Certificates</p>
+    <h2 class="section-title reveal">Certificates</h2>
+
+    <div class="cert-grid">
+      <a href="assets/certificates/certificate-1.pdf" target="_blank" rel="noopener" class="cert-card reveal">
+        <div class="cert-thumb"><img src="assets/certificates/certificate-1.png" alt="Measurements and Sensor Systems certificate"></div>
+        <p>Measurements &amp; Sensor Systems — FZJ / ZEA-2</p>
+      </a>
+
+      <a href="assets/certificates/certificate-2.pdf" target="_blank" rel="noopener" class="cert-card reveal">
+        <div class="cert-thumb"><img src="assets/certificates/certificate-2.png" alt="GGSB Lecture Week certificate"></div>
+        <p>GGSB Lecture Week — Tbilisi</p>
+      </a>
+
+      <a href="assets/certificates/certificate-3.pdf" target="_blank" rel="noopener" class="cert-card reveal">
+        <div class="cert-thumb"><img src="assets/certificates/certificate-3.png" alt="GGSB FPGA Training certificate"></div>
+        <p>GGSB FPGA Training 2025</p>
+      </a>
+    </div>
+  </div>
+  <div class="trace-divider" aria-hidden="true"></div>
+</section>
+
+<section id="contact">
+  <div class="section-inner">
+    <p class="ref-tag reveal">Contact</p>
+    <h2 class="section-title reveal">Let's talk</h2>
+    <p class="contact-sub reveal">Open to internships, research collaborations, and interesting embedded problems.</p>
+    <a href="mailto:lizishavadzd08@gmail.com" class="btn btn-primary reveal">lizishavadzd08@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <p>Built by Lizi Shavadze · 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
