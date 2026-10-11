@@ -3,209 +3,455 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lizi — Embedded Systems Portfolio</title>
+<title>Lizi Shavadze — Portfolio</title>
+<meta name="description" content="Portfolio of Lizi Shavadze, Electronics & Computer Engineer working in embedded systems, FPGA and instrumentation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ============ Preloader ============ -->
+<div id="preloader">
+  <div class="preloader-spinner"></div>
+</div>
+
+<!-- ============ Navbar ============ -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="#hero" class="nav-brand">LS<span class="dot">.</span></a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <a href="#home" class="nav-brand">Lizi<span class="dot">.</span></a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
-<header id="hero">
-  <div class="hero-inner reveal">
-    <p class="eyebrow">// Embedded Systems &amp; FPGA Engineer</p>
-    <h1>Hello, I'm Lizi.</h1>
-    <p class="hero-sub">Welcome to my portfolio website! I am an ECE Engineer. I design and build the layer
-    between hardware and data. Proficient in designing scalable hardware solutions, optimizing circuit
-    layouts, and leveraging advanced IoT technologies. Skilled in Proteus Professional, KiCad, C/C++, FPGA,
-    8-bit and 32-bit microcontroller programming for efficient system integration. Strong problem-solving
-    abilities with expertise in schematic capture, hardware debugging, and firmware development.
-    Through this website, you will discover a collection of my projects and certifications that showcase
-    my abilities and creative problem-solving approach. If you're seeking an Electronic Engineer who is
-    passionate about delivering excellence, let's connect and collaborate on creating something remarkable
-    together.</p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">See projects</a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
-    </div>
+<!-- ============ Hero ============ -->
+<header id="home">
+  <canvas id="circuit-canvas" aria-hidden="true"></canvas>
+  <div class="hero-overlay"></div>
 
-    <div class="about-bottom reveal">
-      <div class="stat">
-        <span class="stat-number" data-target="8">0</span>
-        <span class="stat-label">Projects done</span>
-      </div>
-
-      <div class="socials">
-        <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://github.com/yourhandle" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      </div>
-
-      <a href="assets/Lizi Shavadze, CV.pdf" download class="btn btn-primary">
-        <i class="fa-solid fa-download"></i> My resume
-      </a>
-    </div>
+  <div class="hero-content">
+    <h1>Hi, I'm Lizi</h1>
+    <h3 id="text-rotator">
+      <span class="rotate-item">Electronics &amp; Computer Engineer</span>
+      <span class="rotate-item">Embedded Systems Developer</span>
+      <span class="rotate-item">FPGA &amp; VHDL Designer</span>
+      <span class="rotate-item">Instrumentation &amp; IoT</span>
+    </h3>
   </div>
-  <div class="trace-divider" aria-hidden="true"></div>
+
+  <a href="#about" class="scroll-arrow" aria-label="Scroll to about">
+    <i class="fa-solid fa-angle-down"></i>
+  </a>
 </header>
 
+<!-- ============ About ============ -->
+<section id="about" class="section section-light">
+  <div class="container">
+    <div class="about-grid">
 
-<section id="skills">
-  <div class="section-inner">
-    <p class="ref-tag reveal">My Skills</p>
-    <h2 class="section-title reveal">What I build with</h2>
-    <div class="skills-list">
-      <div class="skill-row reveal">
-        <span class="skill-name">VHDL / FPGA (Vivado)</span>
-        <div class="skill-track"><div class="skill-fill" data-percent="88"></div></div>
+      <div class="about-text reveal">
+        <h2>Hello, I am Lizi</h2>
+        <p>
+          Welcome to my portfolio website!<br>
+          I am an Electronics &amp; Computer Engineer who designs and builds the layer between hardware
+          and data. Proficient in designing scalable hardware solutions, optimizing circuit layouts,
+          and leveraging advanced IoT technologies. Skilled in Proteus Professional, KiCad, C/C++, FPGA,
+          and 8-bit and 32-bit microcontroller programming for efficient system integration. Strong
+          problem-solving abilities with expertise in schematic capture, hardware debugging, and
+          firmware development.
+        </p>
+        <p>
+          Through this website, you will discover a collection of my projects and certifications that
+          showcase my abilities and creative problem-solving approach. If you're seeking an engineer who
+          is passionate about delivering excellence, let's connect and collaborate on creating something
+          remarkable together.
+        </p>
+
+        <ul class="social-icons">
+          <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://github.com/yourhandle" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+
+        <a href="assets/Lizi Shavadze, CV.pdf" download class="btn btn-dark">
+          <i class="fa-solid fa-download"></i> My Resume
+        </a>
       </div>
-      <div class="skill-row reveal">
-        <span class="skill-name">Embedded C / STM32</span>
-        <div class="skill-track"><div class="skill-fill" data-percent="92"></div></div>
+
+      <div class="about-side reveal">
+        <div class="counter-row">
+          <div class="counter-card">
+            <span class="counter" data-target="7">0</span>
+            <p>Projects done</p>
+          </div>
+          <div class="counter-card">
+            <span class="counter" data-target="3">0</span>
+            <p>Certificates</p>
+          </div>
+        </div>
+        <ul class="fact-list">
+          <li><span>Focus</span> Embedded systems &amp; FPGA</li>
+          <li><span>Tools</span> Vivado, STM32Cube, KiCad, Proteus</li>
+          <li><span>Languages</span> VHDL, C/C++, Python, SQL</li>
+          <li><span>Open to</span> Internships &amp; research work</li>
+        </ul>
       </div>
-      <div class="skill-row reveal">
-        <span class="skill-name">Python (data pipelines, test infra)</span>
-        <div class="skill-track"><div class="skill-fill" data-percent="90"></div></div>
-      </div>
-      <div class="skill-row reveal">
-        <span class="skill-name">Signal processing &amp; instrumentation</span>
-        <div class="skill-track"><div class="skill-fill" data-percent="83"></div></div>
-      </div>
-      <div class="skill-row reveal">
-        <span class="skill-name">PCB &amp; circuit fundamentals</span>
-        <div class="skill-track"><div class="skill-fill" data-percent="87"></div></div>
-      </div>
-      <div class="skill-row reveal">
-        <span class="skill-name">Databases (TimescaleDB, MongoDB)</span>
-        <div class="skill-track"><div class="skill-fill" data-percent="82"></div></div>
-      </div>
-      <div class="skill-row reveal">
-        <span class="skill-name">SQL</span>
-        <div class="skill-track"><div class="skill-fill" data-percent="80"></div></div>
-      </div>
-    </div>
-  </div>
-  <div class="trace-divider" aria-hidden="true"></div>
-</section>
-
-<section id="projects">
-  <div class="section-inner">
-    <p class="ref-tag reveal">Projects</p>
-    <h2 class="section-title reveal">Selected work</h2>
-
-    <div class="filters reveal">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="fpga">FPGA / VHDL</button>
-      <button class="filter-btn" data-filter="embedded">Embedded</button>
-      <button class="filter-btn" data-filter="robotics">Robotics</button>
-    </div>
-
-    <div class="project-grid">
-
-      <article class="project-card reveal" data-category="fpga">
-        <span class="card-tag">FPGA / VHDL</span>
-        <h3>Signal Generator &amp; Data Capture</h3>
-        <p>VHDL firmware for signal generation and instrument data capture on a ZCU104 (Zynq UltraScale+),
-        built and verified through Vivado simulation and implementation.</p>
-        <a href="#" class="card-link">View on GitHub →</a>
-      </article>
-
-      <article class="project-card reveal" data-category="robotics">
-        <span class="card-tag">Robotics</span>
-        <h3>6-Axis Robotic Arm</h3>
-        <p>Fully articulated robotic arm with custom inverse kinematics and stepper-motor control,
-        built from the mechanics up.</p>
-        <a href="#" class="card-link">View on GitHub →</a>
-      </article>
-
-      <article class="project-card reveal" data-category="embedded">
-        <span class="card-tag">Embedded</span>
-        <h3>RFID Attendance System</h3>
-        <p>Contactless attendance tracker using a microcontroller-driven RFID reader with live logging
-        to a backend database.</p>
-        <a href="#" class="card-link">View on GitHub →</a>
-      </article>
-
-      <article class="project-card reveal" data-category="embedded">
-        <span class="card-tag">Embedded</span>
-        <h3>Ultrasonic Parking System</h3>
-        <p>Distance-sensing parking assistant with buzzer and LED feedback that scales with proximity
-        to an obstacle.</p>
-        <a href="#" class="card-link">View on GitHub →</a>
-      </article>
-
-      <article class="project-card reveal" data-category="embedded">
-        <span class="card-tag">Embedded</span>
-        <h3>Stepper Motor Firmware</h3>
-        <p>STM32-based stepper motor control firmware developed during an internship, focused on
-        precise, repeatable motion.</p>
-        <a href="#" class="card-link">View on GitHub →</a>
-      </article>
-
-      <article class="project-card reveal" data-category="fpga">
-        <span class="card-tag">FPGA / VHDL</span>
-        <h3>Scalable Research Data Management</h3>
-        <p>Python test infrastructure and a database-logging hook connecting live instrumentation
-        to a TimescaleDB backend, built for high-speed lab data capture.</p>
-        <a href="#" class="card-link">View on GitHub →</a>
-      </article>
 
     </div>
   </div>
-  <div class="trace-divider" aria-hidden="true"></div>
 </section>
 
-<section id="certificates">
-  <div class="section-inner">
-    <p class="ref-tag reveal">Certificates</p>
-    <h2 class="section-title reveal">Certificates</h2>
+<!-- ============ Skills ============ -->
+<section id="skills" class="section section-grey">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>My Skills</h2>
+      <span class="head-rule"></span>
+    </div>
+
+    <div class="skills-grid">
+      <div class="progress-box reveal">
+        <p>VHDL / FPGA (Vivado) <span class="percent">88%</span></p>
+        <div class="progress"><div class="progress-bar" data-width="88"></div></div>
+      </div>
+      <div class="progress-box reveal">
+        <p>Embedded C / STM32 <span class="percent">92%</span></p>
+        <div class="progress"><div class="progress-bar" data-width="92"></div></div>
+      </div>
+      <div class="progress-box reveal">
+        <p>Python (data pipelines, test infra) <span class="percent">90%</span></p>
+        <div class="progress"><div class="progress-bar" data-width="90"></div></div>
+      </div>
+      <div class="progress-box reveal">
+        <p>Signal processing &amp; instrumentation <span class="percent">83%</span></p>
+        <div class="progress"><div class="progress-bar" data-width="83"></div></div>
+      </div>
+      <div class="progress-box reveal">
+        <p>PCB &amp; circuit fundamentals (KiCad, Proteus) <span class="percent">87%</span></p>
+        <div class="progress"><div class="progress-bar" data-width="87"></div></div>
+      </div>
+      <div class="progress-box reveal">
+        <p>Databases (TimescaleDB, MongoDB) <span class="percent">82%</span></p>
+        <div class="progress"><div class="progress-bar" data-width="82"></div></div>
+      </div>
+      <div class="progress-box reveal">
+        <p>SQL <span class="percent">80%</span></p>
+        <div class="progress"><div class="progress-bar" data-width="80"></div></div>
+      </div>
+      <div class="progress-box reveal">
+        <p>Serial interfaces (UART, SPI, I2C, CAN) <span class="percent">86%</span></p>
+        <div class="progress"><div class="progress-bar" data-width="86"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Projects ============ -->
+<section id="projects" class="section section-light">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Projects</h2>
+      <span class="head-rule"></span>
+    </div>
+
+    <div class="filter-btns reveal">
+      <div class="filter active" data-filter="all">All</div>
+      <div class="filter" data-filter="embedded">Embedded</div>
+      <div class="filter" data-filter="analog">Analog &amp; Sensors</div>
+      <div class="filter" data-filter="robotics">Robotics</div>
+      <div class="filter" data-filter="instrumentation">Instrumentation</div>
+      <div class="filter" data-filter="pcb">PCB Design</div>
+    </div>
+
+    <!--
+      Photos live in assets/img/projects/ (see the README there). Each card lists the
+      photos it has; a file that isn't there is dropped automatically and the card
+      falls back to its gradient icon header. To add another, copy a slide line.
+    -->
+    <div class="card-grid">
+
+      <article class="p-card reveal" data-category="embedded">
+        <div class="card-media">
+          <div class="media-fallback hdr-embedded"><i class="fa-solid fa-moon"></i></div>
+          <div class="slider">
+            <img class="slide" src="assets/img/projects/dusktimer-1.jpg" alt="DuskTimer — circuit with AVR microcontroller, DS1307 real-time clock and LCD" loading="lazy">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag">Embedded</span><span class="card-year">2025</span></div>
+          <h4>DuskTimer</h4>
+          <p class="card-subtitle">Calendar-Based Night Lighting Controller</p>
+          <p>Street and building lighting that switches at the right moment every day of the year
+          without a light sensor. A DS1307 real-time clock feeds date and time to an ATmega168 over
+          I²C, and the firmware computes the day length for a fixed latitude and longitude
+          (41.72° N, 44.72° E) to find dawn, sunrise, sunset and the end of evening twilight before
+          driving the output relay. Three buttons set the clock and per-end minute offsets, the LCD
+          colon blinks on the DS1307's 1 Hz output, and a coin cell keeps time through a power cut.</p>
+        </div>
+      </article>
+
+      <article class="p-card reveal" data-category="embedded pcb">
+        <div class="card-media">
+          <div class="media-fallback hdr-embedded"><i class="fa-solid fa-volume-high"></i></div>
+          <div class="slider">
+            <img class="slide" src="assets/img/projects/voxclock-1.jpg" alt="VoxClock — the finished talking clock in its enclosure, showing time and date on the LCD" loading="lazy">
+            <img class="slide" src="assets/img/projects/voxclock-2.jpg" alt="VoxClock — internal view of the talking clock build" loading="lazy">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag">Embedded</span><span class="card-year">2025 · Master's</span></div>
+          <h4>VoxClock</h4>
+          <p class="card-subtitle">Talking Clock for Blind &amp; Partially-Sighted Users</p>
+          <p>A clock that answers "what time is it?" out loud, so checking the time never means
+          depending on someone else. Time, date and alarms are delivered entirely by recorded speech
+          in Georgian, through a button interface designed to be used without sight. Built on an
+          ATmega324 with its own PCB, and carried from algorithm and flowchart through Proteus
+          simulation to a working physical unit.</p>
+        </div>
+      </article>
+
+      <article class="p-card reveal" data-category="embedded robotics">
+        <div class="card-media">
+          <div class="media-fallback hdr-robotics"><i class="fa-solid fa-robot"></i></div>
+          <div class="slider">
+            <img class="slide" src="assets/img/projects/hexaarm-1.jpg" alt="HexaArm — ATmega168 ADC and PWM servo control schematic in Proteus" loading="lazy">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag">Robotics</span><span class="card-year">2024</span></div>
+          <h4>HexaArm</h4>
+          <p class="card-subtitle">6-Axis Robotic Manipulator Arm</p>
+          <p>Six-axis manipulator driven by six servo channels from a single ATmega168: each ADC
+          channel reads a potentiometer and maps it to a servo's PWM pulse width, so every joint can
+          be positioned independently. Three axes place the wrist, the rest orient it — the same
+          arrangement industrial arms use to reach like a human forearm. Full schematic capture,
+          bill of materials and Proteus simulation.</p>
+        </div>
+      </article>
+
+      <article class="p-card reveal" data-category="embedded instrumentation pcb">
+        <div class="card-media">
+          <div class="media-fallback hdr-instr"><i class="fa-solid fa-wave-square"></i></div>
+          <div class="slider">
+            <img class="slide" src="assets/img/projects/phaseguard-1.jpg" alt="PhaseGuard — 3D visualisation of the control and attenuator PCBs" loading="lazy">
+            <img class="slide" src="assets/img/projects/phaseguard-2.jpg" alt="PhaseGuard — system block diagram" loading="lazy">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag">Instrumentation</span><span class="card-year">2023</span></div>
+          <h4>PhaseGuard</h4>
+          <p class="card-subtitle">3-Phase Voltage &amp; Phase-Angle Meter with Auto-Sequencing</p>
+          <p>Measures all three line voltages and the phase-shift angles between them, then puts the
+          phases back into correct A-B-C order through relays. Each voltage is sampled twenty times
+          for an RMS figure, and Timer1 clocks the interval between zero crossings to 1 µs before
+          converting it into degrees. A protective interlock keeps the output relay open until the
+          sequence is right. ATmega168, LCD readout, and two boards of my own layout — attenuator
+          and control.</p>
+        </div>
+      </article>
+
+      <article class="p-card reveal" data-category="embedded robotics pcb">
+        <div class="card-media">
+          <div class="media-fallback hdr-robotics"><i class="fa-solid fa-satellite-dish"></i></div>
+          <div class="slider">
+            <img class="slide" src="assets/img/projects/pathfinder-1.jpg" alt="PathFinder — PCB layout for the obstacle-avoiding car" loading="lazy">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag">Robotics</span><span class="card-year">2023</span></div>
+          <h4>PathFinder</h4>
+          <p class="card-subtitle">Ultrasonic Obstacle-Avoiding Car</p>
+          <p>The second take on the self-driving car, this time with a microcontroller doing the
+          thinking. An ultrasonic range-finder is timed on Timer1 overflow to measure distance, a
+          servo sweeps the sensor to compare the routes ahead, and the car commits to the clearest
+          one. Firmware written in C for AVR, verified in Proteus, and laid out as a PCB.</p>
+        </div>
+      </article>
+
+      <article class="p-card reveal" data-category="analog robotics">
+        <div class="card-media">
+          <div class="media-fallback hdr-analog"><i class="fa-solid fa-car-side"></i></div>
+          <div class="slider">
+            <img class="slide" src="assets/img/projects/reflexcar-1.jpg" alt="ReflexCar — full schematic: XOR steering logic, 4052 multiplexer and transistor H-bridges" loading="lazy">
+            <img class="slide" src="assets/img/projects/reflexcar-2.jpg" alt="ReflexCar — sensor circuit detail" loading="lazy">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag">Analog &amp; Sensors</span><span class="card-year">2022</span></div>
+          <h4>ReflexCar</h4>
+          <p class="card-subtitle">Two-Motor Car with Infrared Collision Avoidance</p>
+          <p>A car that steers itself around obstacles with no microcontroller and no remote — the
+          decisions are made in hardware. Infrared reflective sensors feed XOR gates and a 4052
+          analogue multiplexer, which switch transistor H-bridges to drive the two motors forward,
+          back or into a turn. A study in how far pure logic can go before firmware is needed.</p>
+        </div>
+      </article>
+
+      <article class="p-card reveal" data-category="analog instrumentation">
+        <div class="card-media">
+          <div class="media-fallback hdr-analog"><i class="fa-solid fa-bolt"></i></div>
+          <div class="slider">
+            <img class="slide" src="assets/img/projects/walltrace-1.jpg" alt="WallTrace — principal schematic of the in-wall cable detector" loading="lazy">
+            <img class="slide" src="assets/img/projects/walltrace-2.jpg" alt="WallTrace — the detector modelled in Proteus" loading="lazy">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="tag">Analog &amp; Sensors</span><span class="card-year">2022</span></div>
+          <h4>WallTrace</h4>
+          <p class="card-subtitle">In-Wall Cable &amp; Live Wiring Detector</p>
+          <p>Finds 220 V / 50 Hz wiring hidden behind plaster without touching it, so a break can be
+          located without knocking the wall down. A field-effect input stage picks up the mains field
+          and a 741 op-amp amplifies it into three sensitivity ranges, indicated on LEDs and a 1 kHz
+          buzzer. Entirely discrete — no microcontroller — with the circuit calculated by hand and
+          modelled in Proteus.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ Hire band ============ -->
+<section id="hire">
+  <div class="container hire-inner">
+    <div class="reveal">
+      <h2>Hire Me</h2>
+      <p>Graduation is not the end; it's the beginning of the work that matters.<br>
+      And I am ready for it!</p>
+    </div>
+    <div class="reveal">
+      <a href="#contact" class="btn btn-light btn-lg">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Certificates ============ -->
+<section id="certificates" class="section section-light">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Certificates</h2>
+      <span class="head-rule"></span>
+    </div>
 
     <div class="cert-grid">
       <a href="assets/Lizi Shavadze, GGSB_Certificate_N1.pdf" target="_blank" rel="noopener" class="cert-card reveal">
-        <div class="cert-thumb"><img src="assets/Lizi Shavadze, GGSB_Certificate_N1.png" alt="Measurements and Sensor Systems certificate"></div>
-        <p>Measurements &amp; Sensor Systems — FZJ / ZEA-2</p>
+        <div class="cert-thumb">
+          <img src="assets/Lizi Shavadze, GGSB_Certificate_N1.png" alt="Measurements and Sensor Systems certificate">
+          <span class="cert-view"><i class="fa-solid fa-up-right-from-square"></i> Open PDF</span>
+        </div>
+        <div class="cert-caption">
+          <h4>Measurements &amp; Sensor Systems</h4>
+          <p>FZJ / ZEA-2</p>
+        </div>
       </a>
 
       <a href="assets/Lizi Shavadze, GGSB_Certificate_N2.pdf" target="_blank" rel="noopener" class="cert-card reveal">
-        <div class="cert-thumb"><img src="assets/Lizi Shavadze, GGSB_Certificate_N2.png" alt="GGSB Lecture Week certificate"></div>
-        <p>GGSB Lecture Week — Tbilisi</p>
+        <div class="cert-thumb">
+          <img src="assets/Lizi Shavadze, GGSB_Certificate_N2.png" alt="GGSB Lecture Week certificate">
+          <span class="cert-view"><i class="fa-solid fa-up-right-from-square"></i> Open PDF</span>
+        </div>
+        <div class="cert-caption">
+          <h4>GGSB Lecture Week</h4>
+          <p>Tbilisi</p>
+        </div>
       </a>
 
       <a href="assets/Lizi Shavadze, GGSB_Certificate_N3.PDF" target="_blank" rel="noopener" class="cert-card reveal">
-        <div class="cert-thumb"><img src="assets/Lizi Shavadze, GGSB_Certificate_N3.png" alt="GGSB FPGA Training certificate"></div>
-        <p>GGSB FPGA Training 2025</p>
+        <div class="cert-thumb">
+          <img src="assets/Lizi Shavadze, GGSB_Certificate_N3.png" alt="GGSB FPGA Training certificate">
+          <span class="cert-view"><i class="fa-solid fa-up-right-from-square"></i> Open PDF</span>
+        </div>
+        <div class="cert-caption">
+          <h4>GGSB FPGA Training 2025</h4>
+          <p>Tbilisi</p>
+        </div>
       </a>
     </div>
   </div>
-  <div class="trace-divider" aria-hidden="true"></div>
 </section>
 
-<section id="contact">
-  <div class="section-inner">
-    <p class="ref-tag reveal">Contact</p>
-    <h2 class="section-title reveal">Let's talk</h2>
-    <p class="contact-sub reveal">Open to internships, research collaborations, and interesting embedded problems.</p>
-    <a href="mailto:lizishavadzd08@gmail.com" class="btn btn-primary reveal">lizishavadzd08@gmail.com</a>
+<!-- ============ Contact ============ -->
+<section id="contact" class="section section-grey">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Contact Me</h2>
+      <span class="head-rule"></span>
+    </div>
+
+    <div class="address-icons reveal">
+      <div class="address-item">
+        <i class="fa-solid fa-envelope"></i>
+        <p><a href="mailto:lizishavadzd08@gmail.com">lizishavadzd08@gmail.com</a></p>
+      </div>
+      <div class="address-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Tbilisi, Georgia</p>
+      </div>
+      <div class="address-item">
+        <i class="fa-brands fa-linkedin-in"></i>
+        <p><a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">linkedin.com/in/yourhandle</a></p>
+      </div>
+    </div>
+
+    <!--
+      This form opens the visitor's mail client with the message pre-filled, so it works on a
+      static host with no backend. To collect messages in an inbox instead, create a free
+      Formspree form and set FORMSPREE_ENDPOINT in script.js.
+    -->
+    <form id="contact-form" class="reveal" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" name="name" id="name" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" id="email" placeholder="Email" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea name="message" id="message" rows="5" placeholder="Message..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark btn-lg">Send Message</button>
+      <p id="form-status" role="status"></p>
+    </form>
   </div>
 </section>
 
+<!-- ============ Footer ============ -->
 <footer>
-  <p>Built by Lizi Shavadze · 2026</p>
+  <div class="container footer-inner">
+    <p>&copy; 2026 Lizi Shavadze</p>
+    <ul class="social-icons small">
+      <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="https://github.com/yourhandle" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+      <li><a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+    </ul>
+  </div>
 </footer>
+
+<a href="#home" id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-angle-up"></i></a>
+
+<!-- ============ Photo lightbox ============ -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Project photo" hidden>
+  <button class="lb-close" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" aria-label="Previous photo">&lsaquo;</button>
+  <img src="" alt="">
+  <button class="lb-nav lb-next" aria-label="Next photo">&rsaquo;</button>
+  <p class="lb-caption"></p>
+</div>
 
 <script src="script.js"></script>
 </body>
